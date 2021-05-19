@@ -34,3 +34,4 @@
 #Visual studio
 *.VC.db
 *.ipch
+*.suo
