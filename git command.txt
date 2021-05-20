@@ -9,7 +9,7 @@ git commit
 git push
 
 git log
-git log -decorate -graph -oneline
+git log --decorate --graph --oneline
 
 
 
