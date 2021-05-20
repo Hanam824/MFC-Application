@@ -1,0 +1,19 @@
+git init
+git clone
+git pull
+
+git status
+
+git add, git add .
+git commit
+git push
+
+git log
+git log -decorate -graph -oneline
+
+
+
+example:
+git add .
+git commit -m "add tools and src folder"
+git push -u origin main
