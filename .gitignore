@@ -33,6 +33,7 @@
 
 #Visual studio
 *.VC.db
+*.VC.opendb
 *.ipch
 *.suo
 *.aps
