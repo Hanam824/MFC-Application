@@ -23,6 +23,9 @@
 
 #include <propkey.h>
 
+//dialog
+#include "DemoDialog.h"
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -32,6 +35,7 @@
 IMPLEMENT_DYNCREATE(CUranusDoc, CDocument)
 
 BEGIN_MESSAGE_MAP(CUranusDoc, CDocument)
+	ON_COMMAND(ID_MFC_CONTROL_1, &CUranusDoc::OnIddDialogTest)
 END_MESSAGE_MAP()
 
 
@@ -145,3 +149,11 @@ void CUranusDoc::Dump(CDumpContext& dc) const
 
 
 // CUranusDoc commands
+
+
+void CUranusDoc::OnIddDialogTest()
+{
+	// TODO: Add your command handler code here
+	CDemoDialog demo;
+	demo.DoModal();
+}

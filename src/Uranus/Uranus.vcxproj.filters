@@ -63,6 +63,9 @@
     <ClInclude Include="CalendarBar.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DemoDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Uranus.cpp">
@@ -99,6 +102,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CalendarBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DemoDialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -225,6 +231,9 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="res\Uranus.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ribbon1.mfcribbon-ms">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
