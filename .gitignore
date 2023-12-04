@@ -51,3 +51,8 @@
 *.lastbuildstate
 *.res
 *.idb
+
+
+# ignore specific folder
+.vs/
+temp/
