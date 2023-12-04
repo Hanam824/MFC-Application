@@ -19,7 +19,7 @@ PrivilegesRequired=lowest
 ;DialogFontSize=12
 
 [Files]
-Source: compiler:WizModernSmallImage.bmp; Flags: dontcopy
+Source: compiler:WizClassicSmallImage.bmp; Flags: dontcopy
 
 [Code]
 procedure ButtonOnClick(Sender: TObject);
@@ -249,7 +249,6 @@ begin
   ProgressBar2.Anchors := [akLeft, akRight, akBottom];
   ProgressBar2.Parent := Page.Surface;
   ProgressBar2.Position := 50;
-  { Note: TNewProgressBar.State property only has an effect on Windows Vista and newer }
   ProgressBar2.State := npbsError;
 
   ProgressBar3 := TNewProgressBar.Create(Page);
@@ -259,7 +258,6 @@ begin
   ProgressBar3.Height := ProgressBarLabel.Height + ScaleY(8);
   ProgressBar3.Anchors := [akLeft, akRight, akBottom];
   ProgressBar3.Parent := Page.Surface;
-  { Note: TNewProgressBar.Style property only has an effect on Windows XP and newer }
   ProgressBar3.Style := npbstMarquee;
   
   { TNewCheckListBox }
@@ -277,9 +275,13 @@ begin
   CheckListBox.AddRadioButton('TNewCheckListBox', '', 1, False, True, nil);
   CheckListBox.AddCheckBox('TNewCheckListBox', '', 0, True, True, False, True, nil);
   CheckListBox.AddCheckBox('TNewCheckListBox', '', 1, True, True, False, True, nil);
-  CheckListBox.AddCheckBox('TNewCheckListBox', '', 2, True, True, False, True, nil);
-  CheckListBox.AddCheckBox('TNewCheckListBox', '', 2, False, True, False, True, nil);
+  CheckListBox.AddCheckBox('TNewCheckListBox', '123', 2, True, True, False, True, nil);
+  CheckListBox.AddCheckBox('TNewCheckListBox', '456', 2, False, True, False, True, nil);
   CheckListBox.AddCheckBox('TNewCheckListBox', '', 1, False, True, False, True, nil);
+  CheckListBox.ItemFontStyle[5] := [fsBold];
+  CheckListBox.SubItemFontStyle[5] := [fsBold];
+  CheckListBox.ItemFontStyle[6] := [fsBold, fsItalic];
+  CheckListBox.SubItemFontStyle[6] := [fsBold, fsUnderline];
 
   CheckListBox2 := TNewCheckListBox.Create(Page);
   CheckListBox2.Top := CheckListBox.Top + CheckListBox.Height + ScaleY(8);
@@ -311,7 +313,7 @@ begin
 
   Page := CreateCustomPage(Page.ID, 'Custom wizard page controls', 'TBitmapImage');
 
-  BitmapFileName := ExpandConstant('{tmp}\WizModernSmallImage.bmp');
+  BitmapFileName := ExpandConstant('{tmp}\WizClassicSmallImage.bmp');
   ExtractTemporaryFile(ExtractFileName(BitmapFileName));
 
   BitmapImage := TBitmapImage.Create(Page);
