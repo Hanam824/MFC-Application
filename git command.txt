@@ -12,8 +12,18 @@ git log
 git log --decorate --graph --oneline
 
 
+# check:
+git remote -v
+git branch
+
+
+# new branch
+git checkout -b 01_inital_MFC
+
 
 example:
 git add .
 git commit -m "add tools and src folder"
 git push -u origin main
+
+
