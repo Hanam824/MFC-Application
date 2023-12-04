@@ -17,8 +17,13 @@ git remote -v
 git branch
 
 
-# new branch
+# new branch from master
 git checkout -b 01_inital_MFC
+git add .
+git commit -m "setup initial MFC"
+(create branch on github with same name)
+git branch -m 01_inital_MFC 01_initial_MFC
+git push -u origin 01_initial_MFC
 
 
 example:
